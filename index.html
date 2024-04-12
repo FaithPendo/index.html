@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+   
+    <!-- Boxicons link --> 
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- Google Fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  
+    <!-- Header section -->
+    <header>
+        <div class="container">
+            <a href="#" class="logo"><span>F</span>Pendo</a>
+
+            <ul class="navbar">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+            </ul>
+        </div>
+    </header>
+  
+    <!-- Home section -->
+    <section class="home">
+        <div class="container">
+            <div class="home-text">
+                <span>Software Developer</span>
+                <h1>Faith Pendo</h1>
+                <p>I am a designer, illustrator, and creator of courses, templates, wireframe kits, and the occasionally useful side-project</p>
+                <div class="main-btn">
+                    <a href="#" class="btn">Download CV</a>
+                    <a href="#" class="btn two">Hire Me Now</a>
+                </div>
+            </div>
+
+            <div class="home-img">
+                <img src="Capture.PNG" alt="Portfolio Image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Share section -->
+    <section class="share">
+        <div class="container">
+            <p>Check out my:</p>
+
+            <div class="social">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+                <a href="#"><i class='bx bxl-skype'></i></a>
+            </div>
+        </div>
+    </section>
+  
+    <!-- About section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About</h2>
+            <p>I specialize in crafting dynamic websites tailored to your needs. With expertise in web development, I'll bring your vision to life and boost your online presence effectively. Let's build your digital success together.</p>
+        </div>
+    </section>
+
+    <!-- Services section -->
+    <section id="services" class="section">
+        <div class="container">
+            <h2>Services</h2>
+            <p>Database administrator, Software installation and troubleshooting, Data backup and recovery, IT consulting for business, Cybersecurity solutions</p>
+        </div>
+    </section>
+
+    <!-- Portfolio section -->
+    <section id="portfolio" class="section">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <div class="portfolio-container">
+                <div class="portfolio-item">
+                    <img src="download.jpeg" alt="Project 1">
+                    <h3>Security App</h3>
+                    <p>This app enables you to use protective features to protect your data from security threats</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="images (1).jpeg" alt="Project 2">
+                    <h3>Compiler</h3>
+                    <p>The app allows you to write and run your codes</p>
+                </div>
+                <!-- Add more portfolio items as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog section -->
+    <section id="blog" class="section">
+        <div class="container">
+            <h2>Blog</h2>
+            <p>This is the blog section. Add your blog posts here.</p>
+        </div>
+    </section>
+
+    <!-- Contacts section -->
+    <section id="contacts" class="section">
+        <div class="container">
+            <h2>Contacts</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name <span>*</span></label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number <span>*</span></label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address <span>*</span></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message <span>*</span></label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Faith Pendo. All rights reserved.</p>
+            <div class="footer-social">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+                <a href="#"><i class='bx bxl-skype'></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Select the form element
+            const form = document.getElementById('contact-form');
+
+            // Add event listener for form submission
+            form.addEventListener('submit', function(event) {
+                // Prevent the default form submission behavior
+                event.preventDefault();
+
+                // Get the values entered by the user
+                const name = form.querySelector('#name').value;
+                const phone = form.querySelector('#phone').value;
+                const email = form.querySelector('#email').value;
+                const message = form.querySelector('#message').value;
+
+                // You can now do whatever you want with the form data, like sending it to a server using AJAX
+
+                // For now, let's just log the values to the console
+                console.log('Name:', name);
+                console.log('Phone Number:', phone);
+                console.log('Email Address:', email);
+                console.log('Message:', message);
+
+                // Optionally, you can clear the form fields after submission
+                form.reset();
+            });
+        });
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>
